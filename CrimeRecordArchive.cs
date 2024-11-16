@@ -58,4 +58,4 @@ namespace KursovaOOP
             RecordAdded?.Invoke(this, record);
         }
     }
-}
+} 
