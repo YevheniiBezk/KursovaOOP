@@ -2,15 +2,12 @@
 {
     partial class ArchiveForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Звільнити всі ресурси, які використовуються.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">істинне, якщо керовані ресурси повинні бути видалені; інакше хибне.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,38 +19,37 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.archiveListBox = new System.Windows.Forms.ListBox();
+            this.archiveDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // archiveListBox
+            // archiveDataGridView
             // 
-            this.archiveListBox.FormattingEnabled = true;
-            this.archiveListBox.Location = new System.Drawing.Point(12, 25);
-            this.archiveListBox.Name = "archiveListBox";
-            this.archiveListBox.Size = new System.Drawing.Size(312, 303);
-            this.archiveListBox.TabIndex = 0;
-            this.archiveListBox.SelectedIndexChanged += new System.EventHandler(this.archiveListBox_SelectedIndexChanged);
+            this.archiveDataGridView.AllowUserToAddRows = false;
+            this.archiveDataGridView.AllowUserToDeleteRows = false;
+            this.archiveDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.archiveDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.archiveDataGridView.Name = "archiveDataGridView";
+            this.archiveDataGridView.ReadOnly = true;
+            this.archiveDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.archiveDataGridView.Size = new System.Drawing.Size(760, 437);
+            this.archiveDataGridView.TabIndex = 0;
             // 
             // ArchiveForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 450);
-            this.Controls.Add(this.archiveListBox);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.archiveDataGridView);
             this.Name = "ArchiveForm";
-            this.Text = "Crime Record Archive";
+            this.Text = "Архів записів";
+            ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox archiveListBox;
+        private System.Windows.Forms.DataGridView archiveDataGridView;
     }
 }

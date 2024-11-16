@@ -55,6 +55,12 @@
     <Compile Include="CrimeRecord.cs" />
     <Compile Include="CrimeRecordArchive.cs" />
     <Compile Include="CrimeRecordComparer.cs" />
+    <Compile Include="AddRecordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRecordForm.Designer.cs">
+      <DependentUpon>AddRecordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GangMember.cs" />
     <Compile Include="ICriminal.cs" />
     <Compile Include="MainForm.cs">
