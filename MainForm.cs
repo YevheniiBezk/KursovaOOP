@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel; // Для BindingList
+using System.ComponentModel; 
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -26,7 +26,7 @@ namespace KursovaOOP
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // Додаткові ініціалізації, якщо необхідно
+            
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -98,7 +98,7 @@ namespace KursovaOOP
 
         private void saveTextButton_Click(object sender, EventArgs e)
         {
-            // Реалізація збереження в текстовий файл
+            
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Текстові файли (*.txt)|*.txt|Усі файли (*.*)|*.*";
             saveFileDialog.Title = "Зберегти дані у текстовому форматі";
@@ -118,7 +118,7 @@ namespace KursovaOOP
 
         private void loadTextButton_Click(object sender, EventArgs e)
         {
-            // Реалізація відкриття з текстового файлу
+          
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Текстові файли (*.txt)|*.txt|Усі файли (*.*)|*.*";
             openFileDialog.Title = "Відкрити дані з текстового файлу";
@@ -195,7 +195,7 @@ namespace KursovaOOP
 
         private void hairColorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Обробник події для зміни вибору в ComboBox
+            
         }
 
         private void AddDefaultCriminals()
@@ -225,7 +225,20 @@ namespace KursovaOOP
                     CriminalProfession = "Міжнародний шпигун",
                     HairColor = "Блондинка"
                 },
-                // Додайте інші записи...
+                new CrimeRecord {
+                    FirstName = "Карлос",
+                    LastName = "Рамірес",
+                    Nickname = "Кобра",
+                    Height = 175,
+                    EyeColor = "Карі",
+                    Nationality = "Іспанець",
+                    BirthDate = new DateTime(1988, 7, 29),
+                    BirthPlace = "Барселона, Іспанія",
+                    LastKnownAddress = "Пасео-де-Грасія, 34, Барселона",
+                    CriminalProfession = "Контрабандист наркотиків",
+                    HairColor = "Чорне"
+},
+
             };
 
             foreach (var criminal in criminals)
