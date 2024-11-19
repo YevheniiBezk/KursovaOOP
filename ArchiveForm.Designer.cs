@@ -22,6 +22,7 @@
         private void InitializeComponent()
         {
             this.archiveDataGridView = new System.Windows.Forms.DataGridView();
+            this.deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.archiveDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -34,12 +35,23 @@
             this.archiveDataGridView.Name = "archiveDataGridView";
             this.archiveDataGridView.ReadOnly = true;
             this.archiveDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.archiveDataGridView.Size = new System.Drawing.Size(760, 437);
+            this.archiveDataGridView.Size = new System.Drawing.Size(760, 379);
             this.archiveDataGridView.TabIndex = 0;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(312, 397);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(134, 36);
+            this.deleteButton.TabIndex = 5;
+            this.deleteButton.Text = "Видалити";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click1);
             // 
             // ArchiveForm
             // 
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.archiveDataGridView);
             this.Name = "ArchiveForm";
             this.Text = "Архів записів";
@@ -51,5 +63,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView archiveDataGridView;
+        private System.Windows.Forms.Button deleteButton;
     }
 }

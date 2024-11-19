@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
+using KursovaOOP;
+using static KursovaOOP.MainForm;
 
 namespace KursovaOOP
 {
@@ -18,7 +20,7 @@ namespace KursovaOOP
             archivedRecords = new BindingList<CrimeRecord>(archive.GetArchivedRecords());
             archiveDataGridView.DataSource = archivedRecords;
 
-            // Підписуємося на подію додавання запису до архіву
+            
             this.archive.RecordAdded += Archive_RecordAdded;
         }
 
@@ -31,6 +33,37 @@ namespace KursovaOOP
             else
             {
                 archivedRecords.Add(record);
+            }
+        }
+
+        private void deleteButton_Click1(object sender, EventArgs e)
+        {
+            {
+                if (archiveDataGridView.SelectedRows.Count > 0)
+                {
+                    var selectedRows = archiveDataGridView.SelectedRows;
+                    List<CrimeRecord> recordsToDelete = new List<CrimeRecord>();
+
+                    foreach (DataGridViewRow row in selectedRows)
+                    {
+                        var record = row.DataBoundItem as CrimeRecord;
+                        if (record != null)
+                        {
+                            recordsToDelete.Add(record);
+                        }
+                    }
+
+                    foreach (var record in recordsToDelete)
+                    {
+                        archivedRecords.Remove(record); 
+                    }
+
+                    MessageBox.Show($"{recordsToDelete.Count} запис(ів) видалено.", "Успіх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Будь ласка, виберіть запис для видалення.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }
